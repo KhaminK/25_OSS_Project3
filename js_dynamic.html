@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* placeholder 설정 */
+        input::placeholder{
+            padding-left: 10px;
+            color: lightgray;
+        }
+
+        /* input 다음에 오는 span에만 적용 */
+        input+span{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="textBox" placeholder="apple, banana, kiwi">
+        <input type="submit" id="add" value="추가">
+        <input type="reset" id="delete" value="삭제">
+        <span>total = <span id = "total">0</span></span>
+        <ul id="fruitList">
+        </ul>
+    </form>
+
+</body>
+
+</html>
+
+<script>
+    //html 페이지가 설정되기도 전에 요소를 찾다가 못찾는 아쉬운 상황을 예방하기 위해 사용되었다
+    window.onload = function () {
+        //첫번째 form을 가져온다
+        const myForm = document.querySelector("form");
+        let addButton = document.getElementById("add");
+        let deleteButton = document.getElementById("delete");
+        //총 과일 개수
+        let total = document.getElementById("total");
+        //연습이라 생각하고 했는데, css로 설정하는 것이 더 좋아보인다
+        //하나하나 작성하기가 너무 힘들다. 같은 attribute여도 앞에 똑같이 쓰고 뒤에 뭘 바꿀지만 변경하는데,
+        //이 과정이 너무 번거롭다
+        addButton.style.backgroundColor = "#0f01fd"
+        deleteButton.style.backgroundColor = "#719742"
+        addButton.style.color = "white"
+        deleteButton.style.color = "white"
+
+        //submit이 눌리면 활성화
+        myForm.addEventListener("submit", add);
+        myForm.addEventListener("reset", remove);
+        function add(event) {
+            //페이지 새로고침을 막는다
+            event.preventDefault();
+            //사용자가 입력한 textbox
+            var text = document.getElementById("textBox");
+            //사용작가 입력한 text
+            let textValue = text.value;
+            //text로 콤마 단위로 나누어 textArr 배열에 저장
+            const textArr = textValue.split(",");
+
+            //textArr의 값들을 넣을 위치
+            var fruitList = document.getElementById("fruitList");
+
+            //java처럼 array에 있는 값을 순환할 수 있다
+            for (let fruit of textArr) {
+                //앞뒤 공백을 없애고 빈 값이면 추가하지 않는다
+                fruit = fruit.trim();
+                if (fruit == "") continue;
+                //추가할 li element를 만든다 (빈 깡통)
+                let fruits = document.createElement("li");
+                //빈 깡통에 fruit 값을 저장한다
+                fruits.textContent = fruit;
+                //ul 밑에 fruit를 추가한다
+                fruitList.appendChild(fruits);
+                //총 과일개수를 가져와 int로 바꾸고 1을 더한다
+                total.textContent = parseInt(total.textContent)+1;
+            }
+
+            //다 추가한 후에 입력란을 다시 비운다
+            text.value = "";
+        }
+
+        function remove(event){
+            //li 태그들을 다 static array로 가져온다
+            let liList = document.querySelectorAll("li");
+            for (let li of liList){
+                //각 태그들을 지운다
+                li.remove();
+            }
+            //총 과일개수를 0으로 바꾼다
+            total.textContent=0;
+        }
+    }
+</script>
