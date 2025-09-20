@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        @font-face {
+            font-family: 'Chomsky';
+
+            src: url("chomsky-font/Chomsky-8MOa2.otf") format('opentype');
+        }
+
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline 2px;
+
+        }
+
+        .bottom-nav-border {
+            border-bottom: 4px double black;
+
+        }
+
+
+        input,
+        textarea {
+            width: 100%;
+        }
+
+
+        #input-file {
+            background-color: #FF6600;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-bottom: 3px;
+            width: 100%;
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 3px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            object-fit: cover;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .whole-container {
+            border-radius: 10px;
+            padding: 0 20%;
+        }
+
+        .darker {
+            filter: brightness(0.5);
+        }
+
+        form {
+            background-color: #F9F5F0;
+            border-top-right-radius: 30px;
+            border-end-end-radius: 30px;
+        }
+
+        .image-container {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar py-0" style="background-color: white;" data-bs-theme="light">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="destination.html"
+                style="font-family: 'Chomsky', sans-serif; font-size: clamp(2rem, 8vw, 4.5rem); color:black">
+                The New York Times
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm py-0 bottom-nav-border" style="background-color: white;" data-bs-theme="light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark link-underline-opacity-100-hover" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            U.S.
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            World
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Business
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Arts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lifestlye
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Opinion
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="vr m-3 d-none d-md-block"></div>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Audio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Games
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Cooking
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Wirecutter
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            The Athletic
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid whole-container">
+        <div class="row mt-3">
+            <div class="col-12 col-sm-6 card p-0 m-0 text-light image-container">
+                <img class="darker" src="protest.webp" class="card-img" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                    <h2 class="card-title fw-bold text-center">One Voice Changes The World</h2>
+                    <p class="card-text text-center">No Single Voice Will Be Ignored</p>
+                </div>
+            </div>
+            <form action="index.html" class="col-12 col-sm-6">
+                <h1>Report</h1>
+                <div class="formGroup mb-3">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="formGroup mb-3">
+                    <label for="date">Date</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="formGroup mb-3">
+                    <label for="author">Author</label>
+                    <input type="text" id="author">
+                </div>
+                <div class="formGroup mb-3">
+                    <label for="name">Views(you can fake it)</label>
+                    <input type="number" id="views">
+                </div>
+                <div class="formGroup mb-3">
+                    <label for="content">Summary</label>
+                    <textarea name="content" id="content"></textarea>
+                </div>
+                <div class="formGroup mb-3">
+                    <label for="file" id="input-file">Related Image</label>
+                    <input type="file" id="file" style="display: none;">
+                </div>
+                <div class="formGroup row mb-3 px-3">
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="btncheck2">It is LIVE</label>
+
+                </div>
+                <input type="submit" value="추가" id="add">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Success!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for supporting CR7. Your report has been submitted.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="index.html"><button type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Close</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+<script>
+    const myForm = document.querySelector("form");
+    myForm.addEventListener("submit", thankYou);
+
+    function thankYou(event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById("name").value.trim();
+        const author = document.getElementById("author").value.trim();
+        const views = document.getElementById("views").value.trim();
+        const summary = document.getElementById("content").value.trim();
+
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const viewsRegex = /^\d+$/;
+
+        if (!nameRegex.test(fullName)) {
+            alert('Please enter a valid full name (letters and spaces only).');
+            return;
+        }
+
+        if (!nameRegex.test(author)) {
+            alert('Please enter a valid author name (letters and spaces only).');
+            return;
+        }
+
+        if (!viewsRegex.test(views)) {
+            alert('Views must be a number.');
+            return;
+        }
+
+        if (summary.length < 10) {
+            alert('Summary must be at least 10 characters long.');
+            return;
+        }
+        const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+        confirmModal.show();
+    }
+</script>
+</script>

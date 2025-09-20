@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: 'Chomsky';
+            src: url("chomsky-font/Chomsky-8MOa2.otf") format('opentype');
+        }
+
+        body {
+            overflow-x: hidden;
+            padding: 0 8%;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline 2px;
+
+        }
+
+        .bottom-nav-border {
+            border-bottom: 4px double black;
+
+        }
+
+        .whole-container {
+            border-radius: 10px;
+            padding: 0 20%;
+        }
+
+        form {
+            background-color: #F9F5F0;
+            border-radius: 30px;
+            padding: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+        }
+
+        #input-file {
+            background-color: #FF6600;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-bottom: 3px;
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .darker {
+            filter: brightness(0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar py-0" style="background-color: white;" data-bs-theme="light">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="destination.html"
+                style="font-family: 'Chomsky', sans-serif; font-size: clamp(2rem, 8vw, 4.5rem); color:black">
+                The New York Times
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm py-0 bottom-nav-border" style="background-color: white;" data-bs-theme="light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark link-underline-opacity-100-hover" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            U.S.
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            World
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Business
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Arts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lifestlye
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Opinion
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="vr m-3 d-none d-md-block"></div>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Audio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Games
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Cooking
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Wirecutter
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            The Athletic
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SIU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUU</a></li>
+                            <li><a class="dropdown-item" href="#">SIUUUUUUUU</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid whole-container mt-4">
+        <div class="row">
+            <div class="col-12 col-sm-6 mb-3">
+                <img src="protest.webp" alt="Image" class="darker" />
+            </div>
+            <form id="editForm" class="col-12 col-sm-6">
+                <h1>Edit Report</h1>
+                <div class="mb-3">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" value="Lionel Messi" />
+                </div>
+                <div class="mb-3">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" value="2002-01-30" />
+                </div>
+                <div class="mb-3">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" value="Cristiano Ronaldo" />
+                </div>
+                <div class="mb-3">
+                    <label for="views">Views</label>
+                    <input type="number" id="views" value="1234" />
+                </div>
+                <div class="mb-3">
+                    <label for="content">Summary</label>
+                    <textarea
+                        id="content">The 2024 presidential race has reignited fierce 
+                        debates across the United States as Donald Trump and Joe Biden 
+                        prepare for a rematch. While Biden presents his administration’s
+                         record on infrastructure, jobs, and global diplomacy, Trump continues 
+                         to rally his base around immigration reform, economic nationalism, and 
+                         criticisms of the current administration. Polls show a nation deeply polarized, 
+                         with swing states once again poised to decide the outcome. Analysts predict record voter 
+                         turnout, echoing the historic levels seen in 2020. Both candidates have framed the stakes 
+                         in absolute terms. Biden warns that democracy is at risk, while Trump claims the country needs 
+                         saving from “failed leadership.” As Election Day draws near, the race remains too close to call.</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="file" id="input-file">Related Image</label>
+                    <input type="file" id="file" style="display: none;" />
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" checked />
+                    <label class="btn btn-outline-danger" for="btncheck2">It is LIVE</label>
+                </div>
+                <input type="submit" value="수정" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">수정 완료</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>게시물이 성공적으로 수정되었습니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="index.html"><button type="button" class="btn btn-success"
+                            data-bs-dismiss="modal">확인</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <script>
+        const form = document.getElementById("editForm");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById("name").value.trim();
+            const author = document.getElementById("author").value.trim();
+            const views = document.getElementById("views").value.trim();
+            const summary = document.getElementById("content").value.trim();
+
+            const nameRegex = /^[A-Za-z\s]+$/;
+            const viewsRegex = /^\d+$/;
+
+            if (!nameRegex.test(fullName)) {
+                alert('Please enter a valid full name (letters and spaces only).');
+                return;
+            }
+
+            if (!nameRegex.test(author)) {
+                alert('Please enter a valid author name (letters and spaces only).');
+                return;
+            }
+
+            if (!viewsRegex.test(views)) {
+                alert('Views must be a number.');
+                return;
+            }
+
+            if (summary.length < 10) {
+                alert('Summary must be at least 10 characters long.');
+                return;
+            }
+
+            if (confirm("게시물을 수정할까요?")) {
+                const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                confirmModal.show();
+            }
+        });
+    </script>
+</body>
+
+</html>
